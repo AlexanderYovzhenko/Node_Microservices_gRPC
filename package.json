@@ -1,0 +1,27 @@
+{
+  "name": "node_microservices_grpc",
+  "version": "1.0.0",
+  "description": "microservices on gRPC",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoldenManBel/Node_Microservices_gRPC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoldenManBel/Node_Microservices_gRPC/issues"
+  },
+  "homepage": "https://github.com/GoldenManBel/Node_Microservices_gRPC#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "fastify": "^4.5.3"
+  }
+}
