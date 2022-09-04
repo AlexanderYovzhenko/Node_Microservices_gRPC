@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service MailService {
+  rpc send (MailRequest) returns (MailReply) {}
+}
+
+message MailRequest {
+  required string email = 1;
+  required string message = 2;
+}
+
+message MailReply {
+  required bool status = 1;
+  string message = 2;
+  string email = 3;
+}
