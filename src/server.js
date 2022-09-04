@@ -27,10 +27,11 @@ const client = new Service(
   grpc.credentials.createInsecure()
 )
 
-fastify.get('/', async (request, reply) => {
+fastify.get('/', (request, reply) => {
   client.send({ email: 'myemail@gmail.com', message: request.query.message }, (error, replyMicroservice) => {
     if (error) throw error
-      reply.send(replyMicroservice.message)
+    console.info(replyMicroservice.message)
+    reply.send(replyMicroservice.message)
   })
 })
 
