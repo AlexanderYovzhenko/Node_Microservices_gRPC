@@ -17,7 +17,7 @@ const options = {
   enums: String,
   defaults: true,
   oneofs: true,
-};
+}
 
 const packageDefinition = protoLoader.loadSync(PROTO_PATH, options)
 const Service = grpc.loadPackageDefinition(packageDefinition).MailService
@@ -28,7 +28,7 @@ const client = new Service(
 )
 
 fastify.get('/', async (request, reply) => {
-  client.send({ email: 'myemail@gmail.com', message: 'Hi microservice' }, (error, replyMicroservice) => {
+  client.send({ email: 'myemail@gmail.com', message: request.query.message }, (error, replyMicroservice) => {
     if (error) throw error
       reply.send(replyMicroservice.message)
   })
