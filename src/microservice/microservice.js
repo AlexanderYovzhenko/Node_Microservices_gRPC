@@ -15,7 +15,7 @@ function main() {
     send(payload, send) {
       send(null, {
         status: true,
-        message: `Hello! Your message: ${payload.request.message}`, 
+        message: `Hello! Your message: ${payload.request.message || 'Not message'}`,
         email: payload.request.email
       })
     }
