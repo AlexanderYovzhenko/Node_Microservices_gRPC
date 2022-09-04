@@ -1,0 +1,13 @@
+{
+  "name": "microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon src/microservice.js",
+    "start": "node src/microservice.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
